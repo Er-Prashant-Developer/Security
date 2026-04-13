@@ -53,7 +53,7 @@ const Hero = () => {
           ref={textRef} 
           className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold uppercase tracking-tight leading-tight mb-6 flex flex-wrap justify-center gap-x-4"
         >
-          <span>Elite</span> 
+          <span>GNSS</span> 
           <span>Security</span> 
           <span className="text-gold-500">Solutions</span>
         </h1>
