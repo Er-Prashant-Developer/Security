@@ -22,7 +22,6 @@ const About = () => {
 
   useGSAP(() => {
 
-    // ✅ TEXT ANIMATION
     gsap.fromTo('.about-content > *',
       { y: 60, opacity: 0 },
       {
@@ -38,7 +37,6 @@ const About = () => {
       }
     );
 
-    // ✅ IMAGE ANIMATION (FIXED)
     gsap.fromTo('.about-img',
       { y: 80, opacity: 0, scale: 1.05 },
       {
@@ -55,7 +53,6 @@ const About = () => {
       }
     );
 
-    // ✅ COUNTER
     numberRefs.current.forEach((el, index) => {
       let obj = { value: 0 };
 
@@ -83,7 +80,6 @@ const About = () => {
         {/* LEFT IMAGE */}
         <div className="relative grid grid-cols-2 gap-4 h-[600px]">
           
-          {/* IMAGE 1 */}
           <img 
             src="/assets/about6.jpeg" 
             alt="CCTV Monitoring" 
@@ -92,18 +88,16 @@ const About = () => {
 
           <div className="flex flex-col gap-4 pt-12">
             
-            {/* LICENSED */}
             <div className="about-img bg-navy-800 rounded-2xl p-6 glass-panel border border-gold-500/30 flex items-center gap-4">
               <div className="bg-gold-500/20 p-3 rounded-full">
                 <ShieldCheck className="text-gold-500" size={32} />
               </div>
               <div>
-                <h4 className="font-bold text-xl">Licensed</h4>
-                <p className="text-gray-400 text-sm">Govt Approved</p>
+                <h4 className="font-bold text-xl">ISO</h4>
+                <p className="text-gray-400 text-sm">Certified Company</p>
               </div>
             </div>
 
-            {/* IMAGE 2 */}
             <img 
               src="/assets/about17.jpeg" 
               alt="Security Team" 
@@ -117,16 +111,19 @@ const About = () => {
         <div className="about-content">
           
           <span className="text-neonBlue-500 uppercase tracking-widest font-bold text-sm mb-4 block">
-            About Aegis Security
+            About Us
           </span>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
             Uncompromising <span className="text-gradient-gold">Protection</span> You Can Trust.
           </h2>
 
+          {/* 🔥 UPDATED TEXT (IMAGE SE LIYA HUA) */}
           <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-            We deliver top-tier security services tailored to your unique requirements.
-            Integrating advanced guarding with surveillance ensures complete safety.
+            Generation Next Security Services is an ISO-certified security agency established in 2008, 
+            providing comprehensive security, maintenance, and housekeeping solutions across India. 
+            The company is led by experienced personnel from armed and paramilitary forces, ensuring 
+            high-quality service with a team of over 600 professionals.
           </p>
           
           <ul className="space-y-4 mb-10">
@@ -142,7 +139,6 @@ const About = () => {
             ))}
           </ul>
 
-          {/* STATS */}
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
             {stats.map((stat, i) => (
               <div key={i}>

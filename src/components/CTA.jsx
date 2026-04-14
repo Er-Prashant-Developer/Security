@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react';
 
 const CTA = () => {
-  const btnRef = useRef(null);
+  const containerRef = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
-    const { left, top, width, height } = btnRef.current.getBoundingClientRect();
+    const { left, top, width, height } = containerRef.current.getBoundingClientRect();
 
-    const x = (clientX - (left + width / 2)) * 0.3;
-    const y = (clientY - (top + height / 2)) * 0.3;
+    const x = (clientX - (left + width / 2)) * 0.2;
+    const y = (clientY - (top + height / 2)) * 0.2;
 
     setPosition({ x, y });
   };
@@ -20,9 +20,8 @@ const CTA = () => {
 
   return (
     <section
-      id="contact"   // ✅ IMPORTANT (footer & hero se connect)
+      id="contact"
       className="py-24 bg-[#050A15] relative overflow-hidden"
-      data-scroll-section
     >
 
       {/* Background Glow */}
@@ -39,19 +38,34 @@ const CTA = () => {
           Contact our specialists today for a comprehensive threat assessment and custom security deployment strategy.
         </p>
 
-        {/* Button */}
-        <div
-          className="inline-block"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-        >
-          <button
-            ref={btnRef}
-            style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
-            className="bg-gold-500 text-navy-900 px-12 py-6 rounded-full font-bold text-xl uppercase tracking-widest transition-transform duration-300 ease-out shadow-goldGlow hover:scale-105"
-          >
-            Get a Quick Quote
-          </button>
+        {/* SOCIAL MEDIA BUTTONS */}
+        <div className="flex justify-center gap-6 flex-wrap">
+
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
+            <i className="fab fa-facebook-f text-white text-xl"></i>
+          </a>
+
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-pink-500 transition transform hover:scale-110">
+            <i className="fab fa-instagram text-white text-xl"></i>
+          </a>
+
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-green-500 transition transform hover:scale-110">
+            <i className="fab fa-whatsapp text-white text-xl"></i>
+          </a>
+
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-blue-400 transition transform hover:scale-110">
+            <i className="fab fa-linkedin-in text-white text-xl"></i>
+          </a>
+
+          {/* 🔥 NEW */}
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-red-600 transition transform hover:scale-110">
+            <i className="fab fa-youtube text-white text-xl"></i>
+          </a>
+
+          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-sky-500 transition transform hover:scale-110">
+            <i className="fab fa-twitter text-white text-xl"></i>
+          </a>
+
         </div>
 
       </div>

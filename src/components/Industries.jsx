@@ -19,42 +19,42 @@ const industries = [
   {
     name: "All Clients",
     icon: <Users size={32} />,
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Auto Sector",
     icon: <Car size={32} />,
-    img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1616877404877-b62fa0846edd?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Education Institutional",
     icon: <GraduationCap size={32} />,
-    img: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Food & Beverage Sector",
     icon: <Utensils size={32} />,
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Banking & Finance",
     icon: <Landmark size={32} />,
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Govt Sector",
     icon: <Building2 size={32} />,
-    img: "https://images.unsplash.com/photo-1575517111839-3a3843ee7c1d?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1618656172765-26774a4a38d2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGdvdmVybm1lbnR8ZW58MHx8MHx8fDA%3D",
   },
   {
     name: "Health Care",
     icon: <HeartPulse size={32} />,
-    img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1708413226312-2c28dfbb346f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhlYWx0aGNhcmUlMjBzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     name: "Industrial Security Services",
     icon: <Factory size={32} />,
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1773580995586-b0195c43386c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8SW5kdXN0cmlhbCUyMFNlY3VyaXR5JTIwU2VydmljZXN8ZW58MHx8MHx8fDA%3D",
   },
   {
     name: "Infrastructure",
@@ -64,7 +64,7 @@ const industries = [
   {
     name: "IT Sector",
     icon: <Laptop size={32} />,
-    img: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Warehouse & Logistics Security",
@@ -79,19 +79,19 @@ const industries = [
   {
     name: "Residential Security Services",
     icon: <Home size={32} />,
-    img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=600&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop",
   },
   {
     name: "Retail Security Services",
     icon: <Store size={32} />,
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop",
+    img: "https://plus.unsplash.com/premium_photo-1682125948844-e2dc8996b0f0?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VjdXJpdHklMjBvJTIwc2hvcHxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];
 
 const Industries = () => {
   return (
     <section
-      id="industries"
+      id="clients"
       className="py-24 bg-[#02050A]"
       data-scroll-section
     >
@@ -105,7 +105,7 @@ const Industries = () => {
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold">
             Tailored Security For Every{" "}
-            <span className="text-gradient">Industry</span>
+            <span className="text-gradient">Clients</span>
           </h2>
         </div>
 

@@ -51,7 +51,7 @@ function App() {
       <Preloader loading={loading} />
       
       {!loading && (
-        <div ref={containerRef} data-scroll-container className="bg-navy-900 min-h-screen text-white font-sans overflow-hidden">
+        <div ref={containerRef} data-scroll-container className="bg-navy-900 min-h-screen text-white font-sans overflow-x-hidden w-full relative">
           <Navbar />
           <Hero />
           <About />

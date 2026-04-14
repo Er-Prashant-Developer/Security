@@ -60,9 +60,9 @@ const Preloader = ({ loading }) => {
         {/* 🔥 COMPANY NAME */}
         <div
           ref={textRef}
-          className="text-3xl font-heading font-bold text-white tracking-widest uppercase mb-4"
+          className="text-xl md:text-3xl font-heading font-bold text-white tracking-widest uppercase mb-4 text-center px-4"
         >
-          GNSS <span className="text-gold-500">Security Service</span>
+          GNSS <span className="text-gold-500 block sm:inline mt-2 sm:mt-0">Security Service</span>
         </div>
 
         {/* 🔥 LOADING PERCENT */}

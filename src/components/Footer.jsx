@@ -12,25 +12,42 @@ const Footer = () => {
           {/* About */}
           <div>
             <h4 className="text-white font-bold text-lg mb-6">About Us</h4>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Generation Next Security Services is an ISO-certified security agency established in 2008,
               providing comprehensive security, maintenance, and housekeeping solutions across India.
               The company is led by experienced personnel from armed and paramilitary forces,
               ensuring high-quality service with a team of over 600 professionals.
             </p>
+
+            {/* CERTIFICATION IMAGE */}
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/footer.png"
+                alt="Certifications"
+                className="rounded-lg w-full max-w-xs object-contain hover:scale-105 transition duration-300"
+              />
+            </a>
           </div>
 
-          {/* Company (Navbar Links) */}
+          {/* COMPANY */}
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Company</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#home" className="hover:text-gold-500 transition">Home</a></li>
-              <li><a href="#about" className="hover:text-gold-500 transition">About</a></li>
-              <li><a href="#services" className="hover:text-gold-500 transition">Services</a></li>
-              <li><a href="#industries" className="hover:text-gold-500 transition">Industries</a></li>
-              <li><a href="#projects" className="hover:text-gold-500 transition">Projects</a></li>
-              <li><a href="#careers" className="hover:text-gold-500 transition">Careers</a></li>
-              <li><a href="#contact" className="hover:text-gold-500 transition">Contact</a></li>
+              <li><a href="#home" className="hover:text-gold-500">Home</a></li>
+              <li><a href="#about" className="hover:text-gold-500">About</a></li>
+              <li><a href="#services" className="hover:text-gold-500">Services</a></li>
+              <li><a href="#clients" className="hover:text-gold-500">Clients</a></li>
+              <li><a href="#blogs" className="hover:text-gold-500">Blogs</a></li>
+              <li><a href="#training" className="hover:text-gold-500">Training</a></li>
+
+              <li>
+                <button
+                  onClick={() => window.dispatchEvent(new Event("openPresence"))}
+                  className="hover:text-gold-500 text-left"
+                >
+                  Our Presence
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -38,14 +55,22 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#services" className="hover:text-gold-500">Security Guard</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Security Supervisor</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Gun Man</a></li>
-              <li><a href="#services" className="hover:text-gold-500">ASO</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Bouncer</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Armed PSO</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Fire Safety Expert</a></li>
-              <li><a href="#services" className="hover:text-gold-500">Surveillance Room</a></li>
+              {[
+                "Security Guard",
+                "Security Supervisor",
+                "Gun Man",
+                "ASO",
+                "Bouncer",
+                "Armed PSO",
+                "Fire Safety Expert",
+                "Surveillance Room"
+              ].map((item, i) => (
+                <li key={i}>
+                  <a href="#services" className="hover:text-gold-500">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -53,14 +78,22 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Other links</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li><a href="#industries" className="hover:text-gold-500">Security Services in Noida</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Private Security Guards</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Security Patrol Services</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Security Guard Services Near Me</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Building Security Services</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Security Services in Gurgaon</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Security Guard Services in Greater Noida</a></li>
-              <li><a href="#industries" className="hover:text-gold-500">Security Services in Faridabad</a></li>
+              {[
+                "Security Services in Noida",
+                "Private Security Guards",
+                "Security Patrol Services",
+                "Security Guard Services Near Me",
+                "Building Security Services",
+                "Security Services in Gurgaon",
+                "Security Guard Services in Greater Noida",
+                "Security Services in Faridabad"
+              ].map((item, i) => (
+                <li key={i}>
+                  <a href="#industries" className="hover:text-gold-500">
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -71,38 +104,21 @@ const Footer = () => {
               
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="text-gold-500 mt-1" />
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Pitampura+New+Delhi" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-gold-500"
-                >
-                  Regd. office : CP-133, Pitampura,<br />
-                  Near Muni Maya Ram Jain Hospital,<br />
-                  New Delhi - 110034
+                <a href="https://maps.google.com" target="_blank" className="hover:text-gold-500">
+                  CP-133, Pitampura, New Delhi - 110034
                 </a>
               </li>
 
               <li className="flex items-start gap-2">
                 <MapPin size={18} className="text-gold-500 mt-1" />
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=Burari+New+Delhi" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-gold-500"
-                >
-                  Branch Office: 139/10/1, A-1 Block,<br />
-                  Gali No. 9, Bengali Colony,<br />
-                  Sant Nagar Burari, New Delhi - 110084
+                <a href="https://maps.google.com" target="_blank" className="hover:text-gold-500">
+                  Burari, New Delhi - 110084
                 </a>
               </li>
 
               <li className="flex items-center gap-2">
                 <Mail size={18} className="text-gold-500" />
-                <a 
-                  href="mailto:info@securityservice.co.in" 
-                  className="hover:text-gold-500"
-                >
+                <a href="mailto:info@securityservice.co.in" className="hover:text-gold-500">
                   info@securityservice.co.in
                 </a>
               </li>
@@ -112,14 +128,8 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Text */}
+        {/* Bottom */}
         <div className="pt-6 border-t border-white/10 text-center text-gray-500 text-sm">
-          Within our arsenal, lie vigilant security guards and sentinels of unyielding dedication,
-          meticulously trained to safeguard your interests. Our services cater to Delhi NCR, Pune and Mumbai.
-        </div>
-
-        {/* Copyright */}
-        <div className="mt-6 text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} Generation Next Security Service
         </div>
 

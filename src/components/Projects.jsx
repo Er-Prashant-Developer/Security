@@ -1,91 +1,107 @@
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const projects = [
-  { num: "01", title: "Apex Tower Alpha", type: "Corporate HQ", img: "https://images.unsplash.com/photo-1582650047385-e21bc5693026?q=80&w=800&auto=format&fit=crop" },
-  { num: "02", title: "Global Summit 2025", type: "Event Security", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop" },
-  { num: "03", title: "Helios Data Center", type: "High-Tech Facility", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" },
-  { num: "04", title: "Royal Crown Estate", type: "Private Residential", img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" }
+const blogs = [
+  {
+    title: "5 Reasons Security Guards are Essential for Every Business",
+    desc: "In the business world today, one cannot stress enough on the issue of safety and security of the premises, employees, and customers."
+  },
+  {
+    title: "The Importance of Security Guards for Business",
+    desc: "A good business plan includes plans for growth and expansion, but none of that would be possible without safeguarding the establishment."
+  },
+  {
+    title: "How to Choose a Private Security Company",
+    desc: "When your company or property requires private security services, you cannot simply hire the first company you come across."
+  }
 ];
 
-const Projects = () => {
-  const scrollRef = useRef(null);
-  const containerRef = useRef(null);
+const Blogs = () => {
+  const [current, setCurrent] = useState(0);
 
-  useGSAP(() => {
-    let panels = gsap.utils.toArray(".project-panel");
+  const prevSlide = () => {
+    setCurrent(current === 0 ? blogs.length - 1 : current - 1);
+  };
 
-    gsap.to(panels, {
-      xPercent: -100 * (panels.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        pin: true,
-        scrub: 1,
-        snap: 1 / (panels.length - 1),
-        end: () => "+=" + scrollRef.current.offsetWidth
-      }
-    });
-  }, { scope: containerRef });
+  const nextSlide = () => {
+    setCurrent(current === blogs.length - 1 ? 0 : current + 1);
+  };
 
   return (
-   <section ref={containerRef} id="projects" className="h-screen py-20 bg-navy-900 overflow-hidden relative pt-32 md:pt-40" data-scroll-section >
-      
-      {/* Heading */}
-      <div className="absolute top-6 md:top-10 left-6 md:left-12 z-10">
-        <span className="text-gold-500 uppercase tracking-widest font-bold text-sm mb-2 block">
-          Case Studies
-        </span>
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-white">
-          Featured <span className="text-gradient">Deployments</span>
-        </h2>
-      </div>
+    <section
+      id="blogs"
+      className="py-24 bg-navy-900 text-white relative overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-      {/* Horizontal Scroll */}
-      <div ref={scrollRef} className="flex h-full w-[400vw] sm:w-[300vw] md:w-[250vw]">
-        {projects.map((proj, i) => (
-          <div key={i} className="project-panel w-screen h-full flex items-center justify-center p-6 md:p-24 relative">
-            
-            <div className="w-full h-full md:h-[85%] max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mt-32 md:mt-20">
-              
-              {/* Info */}
-              <div className="flex-1 text-white md:order-1 order-2 w-full md:pr-10">
-                <span className="text-neonBlue-500 font-mono text-xl">{proj.num}</span>
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <span className="text-gold-500 uppercase tracking-widest font-bold text-sm">
+            Our Blog
+          </span>
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mt-3">
+            Latest <span className="text-gradient">Insights</span>
+          </h2>
+        </div>
 
-                <h3 className="text-5xl md:text-7xl font-heading font-bold mt-4 mb-6 leading-tight">
-                  {proj.title}
-                </h3>
+        {/* Slider */}
+        <div className="relative flex items-center justify-center">
 
-                <p className="text-gold-500 text-xl tracking-widest uppercase mb-8">
-                  {proj.type}
-                </p>
-                
-                <p className="text-gray-400 text-lg mb-8 max-w-sm">
-                  Comprehensive risk assessment and deployment of our elite tactical teams, resulting in zero incidents throughout the operational timeframe.
-                </p>
+          {/* LEFT BUTTON */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 sm:left-2 md:left-10 z-10 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 bg-navy-900/50 sm:bg-transparent transition"
+          >
+            <ChevronLeft />
+          </button>
 
-                <button className="border-b-2 border-gold-500 pb-1 text-white font-bold uppercase tracking-wider hover:text-gold-500 transition-colors">
-                  View Case Study
-                </button>
-              </div>
+          {/* CARD */}
+          <div className="w-full max-w-2xl h-auto min-h-[300px] sm:min-h-[250px] md:min-h-[350px] bg-orange-200 text-black rounded-2xl shadow-xl p-8 px-12 sm:px-16 md:p-10 flex flex-col justify-between text-center transition-all duration-500">
 
-              {/* Image */}
-              <div className="flex-[1.5] w-full h-[50vh] md:h-[90%] relative overflow-hidden rounded-3xl glass-panel md:order-2 order-1">
-                <img 
-                  src={proj.img} 
-                  alt={proj.title} 
-                  className="w-full h-full object-cover transition-transform duration-1000 hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-navy-900/20 mix-blend-multiply"></div>
-              </div>
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold text-red-500 mb-4">
+                {blogs[current].title}
+              </h3>
 
+              <p className="text-gray-600">
+                {blogs[current].desc}
+              </p>
             </div>
+
+            <button className="mt-6 font-semibold border-b-2 border-black hover:text-red-500 hover:border-red-500 transition self-center">
+              Read More
+            </button>
+
           </div>
-        ))}
+
+          {/* RIGHT BUTTON */}
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 sm:right-2 md:right-10 z-10 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 bg-navy-900/50 sm:bg-transparent transition"
+          >
+            <ChevronRight />
+          </button>
+
+        </div>
+
+        {/* DOTS */}
+        <div className="flex justify-center mt-10 gap-3">
+          {blogs.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={`cursor-pointer h-2 rounded-full transition-all ${
+                current === index
+                  ? "w-8 bg-gold-500"
+                  : "w-2 bg-white/30"
+              }`}
+            ></div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default Blogs;

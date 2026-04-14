@@ -6,37 +6,51 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showPresence, setShowPresence] = useState(false);
 
-  // Scroll effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 🔥 Disable scroll when menu open
   useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? "hidden" : "auto";
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+      document.body.style.touchAction = 'auto';
+      document.documentElement.style.overflow = 'auto';
+    }
   }, [mobileMenuOpen]);
 
-  const navLinks = ['Home', 'About', 'Services', 'Industries', 'Projects', 'Careers'];
+  useEffect(() => {
+    const open = () => setShowPresence(true);
+    window.addEventListener("openPresence", open);
+
+    return () => {
+      window.removeEventListener("openPresence", open);
+    };
+  }, []);
+
+  const navLinks = ['Home', 'About', 'Services', 'Clients', 'Blogs', 'Training'];
 
   return (
     <>
       {/* NAVBAR */}
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy-900/90 backdrop-blur-md py-4' : 'bg-transparent py-6'
+        scrolled ? 'bg-navy-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
       }`}>
-
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-
+          
           {/* LOGO */}
           <div className="flex items-center gap-3 cursor-pointer">
-            <img src="/assets/logo.png" className="w-10 h-10 object-contain" />
-            <span className="text-2xl font-bold tracking-wider">GNSS</span>
+            <img src="/assets/logo.png" className="w-16 h-16 md:w-20 md:h-20 object-contain" alt="GNSS Logo" />
+            <span className="text-xl md:text-2xl font-bold tracking-wider text-white">GNSS</span>
           </div>
 
-          {/* DESKTOP NAV */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* DESKTOP LINKS */}
+          <div className="hidden lg:flex items-center gap-8 text-white">
             {navLinks.map((link) => (
               <a 
                 key={link} 
@@ -47,7 +61,6 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* OUR PRESENCE */}
             <button
               onClick={() => setShowPresence(true)}
               className="text-sm font-medium uppercase hover:text-gold-400 transition"
@@ -56,115 +69,116 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* CTA */}
-          <a 
-            href="#contact"
-            className="hidden lg:block bg-gold-500 hover:bg-gold-400 text-navy-900 px-6 py-2 rounded-full font-semibold transition-all hover:scale-105"
-          >
-            Get Quote
-          </a>
+          {/* DESKTOP SOCIAL ICONS */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition">
+              <i className="fab fa-facebook-f text-white"></i>
+            </a>
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition">
+              <i className="fab fa-instagram text-white"></i>
+            </a>
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-green-500 transition">
+              <i className="fab fa-whatsapp text-white"></i>
+            </a>
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-400 transition">
+              <i className="fab fa-linkedin-in text-white"></i>
+            </a>
+
+            {/* NEW */}
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-red-600 transition">
+              <i className="fab fa-youtube text-white"></i>
+            </a>
+            <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-sky-500 transition">
+              <i className="fab fa-twitter text-white"></i>
+            </a>
+          </div>
 
           {/* MOBILE MENU BUTTON */}
           <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="lg:hidden text-white z-[1000]"
+            onClick={() => setMobileMenuOpen(true)} 
+            className="lg:hidden text-white relative z-50 p-2"
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            <Menu size={32} />
+          </button>
+        </div>
+      </nav>
+
+      {/* MOBILE MENU */}
+      <div 
+        className={`lg:hidden fixed top-0 left-0 w-full h-[100dvh] bg-navy-900 z-[99999] transition-transform duration-500 ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-[100%]'
+        } flex flex-col pt-8 px-6 pb-12`}
+      >
+        {/* HEADER */}
+        <div className="flex justify-between items-center mb-8">
+          <div className="flex items-center gap-3">
+            <img src="/assets/logo.png" className="w-14 h-14" alt="logo" />
+            <span className="text-2xl font-bold text-white">GNSS</span>
+          </div>
+
+          <button onClick={() => setMobileMenuOpen(false)} className="text-white">
+            <X size={28} />
           </button>
         </div>
 
-        {/* MOBILE MENU */}
-        <div className={`lg:hidden fixed inset-0 bg-navy-900 z-[999] transition-transform duration-300 flex flex-col pt-24 px-6 ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
-
-          {/* 🔥 CLOSE BUTTON FIX */}
-          <button
-            onClick={() => setMobileMenuOpen(false)}
-            className="absolute top-6 right-6 text-white z-[1000]"
-          >
-            <X size={30} />
-          </button>
-
-          {/* LOGO */}
-          <div className="flex items-center gap-3 mb-10">
-            <img src="/assets/logo.png" className="w-10 h-10" />
-            <span className="text-2xl font-bold">GNSS</span>
-          </div>
-
-          {/* LINKS */}
+        {/* LINKS */}
+        <div className="flex flex-col items-center gap-6 flex-1 justify-center">
           {[...navLinks, "Our Presence"].map((link) => (
             <button 
-              key={link} 
-              className="text-2xl py-4 border-b border-white/10 text-left"
+              key={link}
+              className="text-2xl text-white hover:text-gold-500"
               onClick={() => {
-                if (link === "Our Presence") {
-                  setShowPresence(true);
-                }
+                if (link === "Our Presence") setShowPresence(true);
                 setMobileMenuOpen(false);
               }}
             >
               {link}
             </button>
           ))}
-
-          {/* CTA */}
-          <a 
-            href="#contact"
-            className="mt-8 bg-gold-500 text-navy-900 px-6 py-4 rounded-xl font-bold uppercase text-lg text-center"
-          >
-            Get Quote
-          </a>
         </div>
-      </nav>
 
-      {/* 🔥 FULL SCREEN POPUP */}
+        {/* MOBILE SOCIAL */}
+        <div className="flex gap-6 justify-center">
+          <i className="fab fa-facebook-f text-white"></i>
+          <i className="fab fa-instagram text-white"></i>
+          <i className="fab fa-whatsapp text-white"></i>
+          <i className="fab fa-linkedin-in text-white"></i>
+          <i className="fab fa-youtube text-white"></i>
+          <i className="fab fa-twitter text-white"></i>
+        </div>
+      </div>
+
+      {/* OUR PRESENCE POPUP */}
       {showPresence && (
-        <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-lg flex items-center justify-center p-6">
-
-          {/* CLOSE */}
+        <div className="fixed inset-0 z-[999999] bg-black/80 flex items-center justify-center p-6">
           <button 
             onClick={() => setShowPresence(false)}
-            className="absolute top-6 right-6 text-white text-3xl z-[10000]"
+            className="absolute top-6 right-6 text-white text-3xl"
           >
             ✕
           </button>
 
-          {/* CONTENT */}
-          <div className="w-full max-w-7xl bg-white rounded-2xl p-8 md:p-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-black max-h-[90vh] overflow-y-auto">
-
-            {[
-              {
-                title: "Delhi",
-                items: ["South Delhi", "Central Delhi", "East Delhi", "West Delhi", "North Delhi"]
-              },
-              {
-                title: "Gurgaon",
-                items: ["Sector 56", "Sector 65", "DLF Phase 1", "DLF Phase 2", "Sohna Road", "MG Road"]
-              },
-              {
-                title: "Noida",
-                items: ["Sector 16 & 18", "Sector 62 & 63", "Sector 135", "Sector 132", "Sector 15", "Sector 104a"]
-              },
-              {
-                title: "Faridabad",
-                items: ["Sector 24 & 25", "Industrial Area", "Palwal", "Sector 46 & 37", "Sector 19", "Sector 12"]
-              },
-              {
-                title: "Ghaziabad",
-                items: ["Kavi Nagar", "Sahibabad", "Kaushambi", "Raj Nagar", "Crossings Republik"]
-              }
-            ].map((city, i) => (
-              <div key={i}>
-                <h4 className="text-red-500 font-bold mb-3">{city.title}</h4>
-                <ul className="space-y-2 text-sm md:text-base">
-                  {city.items.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
+          <div className="w-full max-w-7xl bg-white rounded-2xl p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-black">
+            <div>
+              <h3 className="text-red-500 font-bold">Delhi</h3>
+              <p>South Delhi</p><p>Central Delhi</p><p>East Delhi</p><p>West Delhi</p><p>North Delhi</p>
+            </div>
+            <div>
+              <h3 className="text-red-500 font-bold">Gurgaon</h3>
+              <p>Sector 56</p><p>Sector 65</p>
+            </div>
+            <div>
+              <h3 className="text-red-500 font-bold">Noida</h3>
+              <p>Sector 16</p><p>Sector 62</p>
+            </div>
+            <div>
+              <h3 className="text-red-500 font-bold">Faridabad</h3>
+              <p>Sector 24</p>
+            </div>
+            <div>
+              <h3 className="text-red-500 font-bold">Ghaziabad</h3>
+              <p>Kavi Nagar</p>
+            </div>
           </div>
         </div>
       )}

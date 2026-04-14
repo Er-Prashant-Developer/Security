@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
         {/* LEFT CONTENT */}
         <div>
           <span className="text-neonBlue-500 uppercase tracking-widest font-bold text-sm mb-4 block">
-            The Aegis Advantage
+            The GNSS Advantage
           </span>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8">
@@ -87,9 +87,9 @@ const WhyChooseUs = () => {
         {/* RIGHT IMAGE */}
         <div className="w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden relative shadow-lg">
           
-          {/* IMAGE */}
+          {/* 🔥 LOCAL IMAGE UPDATED */}
           <img
-            src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop"
+            src="/assets/about4.jpeg"
             alt="Security Team"
             className="w-full h-full object-cover"
           />
