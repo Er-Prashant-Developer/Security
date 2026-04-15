@@ -14,6 +14,7 @@ import Industries from './components/Industries';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
+import WhatsAppButton from "./components/WhatsAppButton"; // ✅ already imported
 import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -23,7 +24,6 @@ function App() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // Wait for preloader animation
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2800);
@@ -32,14 +32,13 @@ function App() {
 
   useEffect(() => {
     if (!loading) {
-      // Initialize Locomotive Scroll after loading
       const locomotiveScroll = new LocomotiveScroll({
         el: containerRef.current,
         smooth: true,
         multiplier: 1,
         class: 'is-reveal',
       });
-      
+
       return () => {
         locomotiveScroll.destroy();
       };
@@ -51,7 +50,11 @@ function App() {
       <Preloader loading={loading} />
       
       {!loading && (
-        <div ref={containerRef} data-scroll-container className="bg-navy-900 min-h-screen text-white font-sans overflow-x-hidden w-full relative">
+        <div
+          ref={containerRef}
+          data-scroll-container
+          className="bg-navy-900 min-h-screen text-white font-sans overflow-x-hidden w-full relative"
+        >
           <Navbar />
           <Hero />
           <About />
@@ -62,6 +65,9 @@ function App() {
           <Testimonials />
           <CTA />
           <Footer />
+
+          {/* ✅ YAHI ADD KIYA HAI (IMPORTANT) */}
+          <WhatsAppButton />
         </div>
       )}
     </>
