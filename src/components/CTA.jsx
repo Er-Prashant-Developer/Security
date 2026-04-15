@@ -41,28 +41,28 @@ const CTA = () => {
         {/* SOCIAL MEDIA BUTTONS */}
         <div className="flex justify-center gap-6 flex-wrap">
 
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
+          <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
             <i className="fab fa-facebook-f text-white text-xl"></i>
           </a>
 
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-pink-500 transition transform hover:scale-110">
+          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-pink-500 transition transform hover:scale-110">
             <i className="fab fa-instagram text-white text-xl"></i>
           </a>
 
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-green-500 transition transform hover:scale-110">
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-green-500 transition transform hover:scale-110">
             <i className="fab fa-whatsapp text-white text-xl"></i>
           </a>
 
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-blue-400 transition transform hover:scale-110">
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-blue-400 transition transform hover:scale-110">
             <i className="fab fa-linkedin-in text-white text-xl"></i>
           </a>
 
-          {/* 🔥 NEW */}
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-red-600 transition transform hover:scale-110">
+          {/* ✅ YouTube FIXED */}
+          <a href="https://www.youtube.com/watch?v=6xP5oUY7V3w" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-red-600 transition transform hover:scale-110">
             <i className="fab fa-youtube text-white text-xl"></i>
           </a>
 
-          <a href="#" className="bg-white/10 p-4 rounded-full hover:bg-sky-500 transition transform hover:scale-110">
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-sky-500 transition transform hover:scale-110">
             <i className="fab fa-twitter text-white text-xl"></i>
           </a>
 

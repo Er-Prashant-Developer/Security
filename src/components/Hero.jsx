@@ -70,18 +70,15 @@ const Hero = () => {
           ref={textRef} 
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold uppercase tracking-tight leading-tight mb-4 flex flex-wrap justify-center gap-x-2 sm:gap-x-4 px-2 sm:px-0"
         >
-          <span>GNSS</span> 
+
+
+
+          <span>Generation Next</span> 
           <span>Security</span> 
-          <span className="text-gold-500">Solutions</span>
+          <span className="text-gold-500">Services</span>
         </h1>
 
-        {/* 🔥 COMPANY FULL FORM */}
-        <p
-          ref={fullFormRef}
-          className="text-gray-400 text-sm md:text-lg tracking-widest uppercase mb-4"
-        >
-          Generation Next Security Services
-        </p>
+      
 
         {/* ISO */}
         <div 
@@ -89,7 +86,7 @@ const Hero = () => {
           className="mb-6 px-4 sm:px-6 py-2 rounded-full border border-gold-500/40 bg-white/10 backdrop-blur-md text-center"
         >
           <span className="text-gold-500 font-bold tracking-widest text-xs sm:text-sm md:text-base uppercase flex flex-col sm:inline-block">
-            <span className="sm:inline">ISO Certified Company</span> <span className="sm:inline">9001-2015</span>
+            <span className="sm:inline">ISO Certified Company</span> <span className="sm:inline">9001:2015</span>
           </span>
         </div>
 
