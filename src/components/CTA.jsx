@@ -24,10 +24,10 @@ const CTA = () => {
       className="py-24 bg-[#050A15] relative overflow-hidden"
     >
 
-      {/* Background Glow */}
+      
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neonBlue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-      {/* Content */}
+    
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10 glass-panel p-16 border-white/10">
         
         <h2 className="text-5xl md:text-6xl font-heading font-bold text-white mb-6">
@@ -38,7 +38,7 @@ const CTA = () => {
           Contact our specialists today for a comprehensive threat assessment and custom security deployment strategy.
         </p>
 
-        {/* SOCIAL MEDIA BUTTONS */}
+      
         <div className="flex justify-center gap-6 flex-wrap">
 
           <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
@@ -57,7 +57,7 @@ const CTA = () => {
             <i className="fab fa-linkedin-in text-white text-xl"></i>
           </a>
 
-          {/* ✅ YouTube FIXED */}
+      
           <a href="https://www.youtube.com/watch?v=6xP5oUY7V3w" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-4 rounded-full hover:bg-red-600 transition transform hover:scale-110">
             <i className="fab fa-youtube text-white text-xl"></i>
           </a>

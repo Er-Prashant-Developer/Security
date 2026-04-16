@@ -19,7 +19,7 @@ const Footer = () => {
               ensuring high-quality service with a team of over 600 professionals.
             </p>
 
-            {/* CERTIFICATION IMAGE */}
+          
             <a href="#" target="_blank" rel="noopener noreferrer">
               <img
                 src="/assets/footer.png"
@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* COMPANY */}
+      
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Company</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
@@ -51,7 +51,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+        
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
@@ -74,7 +74,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Other Links */}
+          
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Other links</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
@@ -97,7 +97,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+        
           <div>
             <h4 className="text-white font-bold text-lg mb-6">Contact Us</h4>
             <ul className="space-y-4 text-gray-400 text-sm">
@@ -128,7 +128,7 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom */}
+      
         <div className="pt-6 border-t border-white/10 text-center text-gray-500 text-sm">
           © {new Date().getFullYear()} Generation Next Security Service
         </div>

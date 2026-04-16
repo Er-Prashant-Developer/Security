@@ -66,7 +66,7 @@ function App() {
           <CTA />
           <Footer />
 
-          {/* ✅ YAHI ADD KIYA HAI (IMPORTANT) */}
+      
           <WhatsAppButton />
         </div>
       )}

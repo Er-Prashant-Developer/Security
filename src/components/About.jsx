@@ -77,7 +77,7 @@ const About = () => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* LEFT IMAGE */}
+    
         <div className="relative grid grid-cols-2 gap-4 h-[600px]">
           
           <img 
@@ -107,7 +107,7 @@ const About = () => {
 
         </div>
 
-        {/* RIGHT CONTENT */}
+      
         <div className="about-content">
           
           <span className="text-neonBlue-500 uppercase tracking-widest font-bold text-sm mb-4 block">
@@ -118,7 +118,7 @@ const About = () => {
             Uncompromising <span className="text-gradient-gold">Protection</span> You Can Trust.
           </h2>
 
-          {/* 🔥 UPDATED TEXT (IMAGE SE LIYA HUA) */}
+        
           <p className="text-gray-300 text-lg mb-8 leading-relaxed">
             Generation Next Security Services is an ISO-certified security agency established in 2008, 
             providing comprehensive security, maintenance, and housekeeping solutions across India. 

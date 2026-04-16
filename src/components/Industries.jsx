@@ -21,7 +21,7 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* 🔥 FINAL DATA (PDF BASED) */
+
 const clientData = {
   "All Clients": {
     "🏫 Schools": [
@@ -214,7 +214,7 @@ const clientData = {
   ],
 };
 
-/* UI SAME */
+
 const industries = [
   {
     name: "All Clients",

@@ -34,7 +34,7 @@ const Blogs = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
 
-        {/* Heading */}
+        
         <div className="text-center mb-16">
           <span className="text-gold-500 uppercase tracking-widest font-bold text-sm">
             Our Blog
@@ -44,10 +44,10 @@ const Blogs = () => {
           </h2>
         </div>
 
-        {/* Slider */}
+      
         <div className="relative flex items-center justify-center">
 
-          {/* LEFT BUTTON */}
+        
           <button
             onClick={prevSlide}
             className="absolute left-0 sm:left-2 md:left-10 z-10 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 bg-navy-900/50 sm:bg-transparent transition"
@@ -55,7 +55,7 @@ const Blogs = () => {
             <ChevronLeft />
           </button>
 
-          {/* CARD */}
+          
           <div className="w-full max-w-2xl h-auto min-h-[300px] sm:min-h-[250px] md:min-h-[350px] bg-orange-200 text-black rounded-2xl shadow-xl p-8 px-12 sm:px-16 md:p-10 flex flex-col justify-between text-center transition-all duration-500">
 
             <div>
@@ -74,7 +74,7 @@ const Blogs = () => {
 
           </div>
 
-          {/* RIGHT BUTTON */}
+          
           <button
             onClick={nextSlide}
             className="absolute right-0 sm:right-2 md:right-10 z-10 w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center rounded-full border border-white/20 hover:bg-white/10 bg-navy-900/50 sm:bg-transparent transition"
@@ -84,7 +84,7 @@ const Blogs = () => {
 
         </div>
 
-        {/* DOTS */}
+      
         <div className="flex justify-center mt-10 gap-3">
           {blogs.map((_, index) => (
             <div

@@ -12,7 +12,7 @@ const Preloader = ({ loading }) => {
 
     let obj = { value: 0 };
 
-    // 🔥 Percentage Animation
+    
     tl.to(obj, {
       value: 100,
       duration: 2,
@@ -24,7 +24,7 @@ const Preloader = ({ loading }) => {
       }
     });
 
-    // 🔥 Text Animation
+  
     tl.fromTo(
       textRef.current,
       { opacity: 0, y: 20 },
@@ -32,7 +32,7 @@ const Preloader = ({ loading }) => {
       "-=1.5"
     );
 
-    // 🔥 Exit Animation
+    
     if (!loading) {
       gsap.to(containerRef.current, {
         yPercent: -100,
@@ -50,14 +50,14 @@ const Preloader = ({ loading }) => {
     >
       <div className="flex flex-col items-center">
 
-        {/* 🔥 COMPANY LOGO */}
+        
         <img
           src="/assets/logo.png"
           alt="Company Logo"
           className="w-20 h-20 object-contain mb-6 animate-pulse"
         />
 
-        {/* 🔥 COMPANY NAME */}
+      
         <div
           ref={textRef}
           className="text-xl md:text-3xl font-heading font-bold text-white tracking-widest uppercase mb-4 text-center px-4"
@@ -65,7 +65,7 @@ const Preloader = ({ loading }) => {
           GNSS <span className="text-gold-500 block sm:inline mt-2 sm:mt-0">Security Service</span>
         </div>
 
-        {/* 🔥 LOADING PERCENT */}
+      
         <div
           className="text-neonBlue-400 font-mono text-xl"
           ref={percentRef}

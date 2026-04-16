@@ -33,7 +33,7 @@ const services = [
     desc: "Highly trained armed personal security officers providing VIP protection with strict protocols, risk analysis, and professional conduct."
   },
   {
-    icon: <GiPistolGun size={40} />, // 🔫 Gunman
+    icon: <GiPistolGun size={40} />, // 
     title: "Gunman",
     img: "/assets/about5.jpeg",
     desc: "Licensed gunmen for high-risk environments ensuring safety with strict discipline and professional weapon handling."
@@ -51,7 +51,7 @@ const services = [
     desc: "Assistant Security Officers supporting operations, coordination, and maintaining discipline across all security activities."
   },
   {
-    icon: <FaVideo size={40} />, // ✅ Fixed CCTV icon
+    icon: <FaVideo size={40} />, // 
     title: "Surveillance Room",
     img: "/assets/about8.jpeg",
     desc: "24/7 CCTV monitoring with advanced systems ensuring complete surveillance, threat detection, and incident prevention."

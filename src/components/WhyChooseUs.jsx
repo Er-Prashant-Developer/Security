@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT CONTENT */}
+        
         <div>
           <span className="text-neonBlue-500 uppercase tracking-widest font-bold text-sm mb-4 block">
             The GNSS Advantage
@@ -84,20 +84,20 @@ const WhyChooseUs = () => {
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
+        
         <div className="w-full h-[400px] md:h-[600px] rounded-2xl overflow-hidden relative shadow-lg">
           
-          {/* 🔥 LOCAL IMAGE UPDATED */}
+        
           <img
             src="/assets/about4.jpeg"
             alt="Security Team"
             className="w-full h-full object-cover"
           />
 
-          {/* LIGHT OVERLAY */}
+          
           <div className="absolute inset-0 bg-black/20"></div>
 
-          {/* TEXT BOX */}
+          
           <div className="absolute bottom-5 left-5 right-5 bg-black/60 backdrop-blur-md p-5 rounded-xl">
             <p className="text-white text-sm md:text-base">
               "Professional security teams ensuring safety across all environments."

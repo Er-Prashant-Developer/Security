@@ -35,13 +35,13 @@ const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR */}
+      
       <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-navy-900/90 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
       }`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           
-          {/* LOGO */}
+          
           <div className="flex items-center gap-3 cursor-pointer">
             <img 
               src="/assets/logo.png" 
@@ -50,7 +50,7 @@ const Navbar = () => {
             />
           </div>
 
-          {/* DESKTOP LINKS */}
+          
           <div className="hidden lg:flex items-center gap-8 text-white">
             {navLinks.map((link) => (
               <a 
@@ -70,7 +70,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* SOCIAL ICONS */}
+          
           <div className="hidden lg:flex items-center gap-4">
 
             <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition">
@@ -89,7 +89,7 @@ const Navbar = () => {
               <FaLinkedinIn className="text-white" />
             </a>
 
-            {/* ✅ YouTube FIXED */}
+      
             <a href="https://www.youtube.com/watch?v=6xP5oUY7V3w" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-red-600 transition">
               <FaYoutube className="text-white" />
             </a>
@@ -100,7 +100,7 @@ const Navbar = () => {
 
           </div>
 
-          {/* MOBILE MENU BUTTON */}
+          
           <button 
             onClick={() => setMobileMenuOpen(true)} 
             className="lg:hidden text-white relative z-50 p-2"
@@ -110,7 +110,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* MOBILE MENU */}
+  
       <div className={`lg:hidden fixed top-0 left-0 w-full h-[100dvh] bg-navy-900 z-[99999] transition-transform duration-500 ${
         mobileMenuOpen ? 'translate-x-0' : 'translate-x-[100%]'
       } flex flex-col pt-8 px-6 pb-12`}>
@@ -141,7 +141,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* MOBILE SOCIAL */}
+      
         <div className="flex gap-6 justify-center">
 
           <a href="https://facebook.com/yourusername" target="_blank"><FaFacebookF className="text-white" /></a>

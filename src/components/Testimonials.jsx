@@ -46,7 +46,7 @@ const Testimonials = () => {
       <div className="max-w-5xl mx-auto px-6 text-center">
         <Quote className="text-white/10 mx-auto mb-8" size={80} />
         
-        {/* 🔥 FIXED ANIMATION */}
+      
         <div className="relative min-h-[250px] flex items-center justify-center overflow-hidden">
           {testimonials.map((t, i) => (
             <div 
@@ -72,7 +72,7 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* CONTROLS */}
+        
         <div className="flex items-center justify-center gap-6 mt-12">
           <button onClick={prev} className="p-4 rounded-full border border-white/20 hover:bg-white/10 transition-colors text-white">
             <ChevronLeft size={24} />

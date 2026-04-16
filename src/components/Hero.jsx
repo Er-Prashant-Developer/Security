@@ -22,21 +22,21 @@ const Hero = () => {
       { y: 0, opacity: 1, duration: 0.7, stagger: 0.08, ease: "power3.out" }
     );
 
-    // 🔥 FULL FORM ANIMATION
+  
     tl.fromTo(fullFormRef.current,
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
       "-=0.4"
     );
 
-    // ISO
+    
     tl.fromTo(isoRef.current,
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
       "-=0.3"
     );
 
-    // Subtext + buttons
+    
     tl.fromTo([subtextRef.current, ctaRef.current],
       { y: 20, opacity: 0 },
       { y: 0, opacity: 1, duration: 0.6, stagger: 0.15, ease: "power2.out" },
@@ -48,7 +48,7 @@ const Hero = () => {
   return (
     <section id="home" ref={containerRef} className="relative w-full h-screen flex items-center justify-center overflow-hidden">
 
-      {/* BACKGROUND */}
+      
       <div className="absolute inset-0 z-0 overflow-hidden">
         <iframe
           className="absolute top-1/2 left-1/2 w-[120vw] h-[120vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -62,10 +62,10 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-transparent to-transparent"></div>
       </div>
 
-      {/* CONTENT */}
+      
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center mt-20">
         
-        {/* HEADING */}
+        
         <h1 
           ref={textRef} 
           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-bold uppercase tracking-tight leading-tight mb-4 flex flex-wrap justify-center gap-x-2 sm:gap-x-4 px-2 sm:px-0"
@@ -80,7 +80,7 @@ const Hero = () => {
 
       
 
-        {/* ISO */}
+        
         <div 
           ref={isoRef}
           className="mb-6 px-4 sm:px-6 py-2 rounded-full border border-gold-500/40 bg-white/10 backdrop-blur-md text-center"
@@ -90,7 +90,7 @@ const Hero = () => {
           </span>
         </div>
 
-        {/* SUBTEXT */}
+        
         <p 
           ref={subtextRef} 
           className="text-base sm:text-lg md:text-2xl text-gray-300 max-w-3xl mb-10 font-light px-4 sm:px-0"
@@ -98,7 +98,7 @@ const Hero = () => {
           For a Safer Tomorrow. Professional protection services leveraging advanced technology and highly trained personnel.
         </p>
         
-        {/* BUTTONS */}
+        
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
           
           <button className="bg-gold-500 hover:bg-gold-400 text-navy-900 w-full sm:w-auto px-8 py-4 rounded-full font-bold text-sm sm:text-lg uppercase tracking-wider transition-all shadow-goldGlow hover:scale-105 whitespace-nowrap">
@@ -112,7 +112,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* SCROLL */}
+      
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center animate-bounce cursor-pointer">
         <span className="text-sm uppercase tracking-widest text-gray-400 mb-2">Scroll</span>
         <ChevronDown className="text-gold-500" size={24} />
