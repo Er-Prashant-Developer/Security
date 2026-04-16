@@ -11,6 +11,7 @@ import About from './components/About';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Industries from './components/Industries';
+import Training from "./components/Training";
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
@@ -63,6 +64,7 @@ function App() {
           <Industries />
           <Projects />
           <Testimonials />
+          <Training/>
           <CTA />
           <Footer />
 
