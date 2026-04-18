@@ -61,15 +61,15 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition">
+            <a href="https://facebook.com/generation_next_security" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition">
               <FaFacebookF className="text-white" />
             </a>
 
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition">
+            <a href="https://instagram.com/generation_next_security" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition">
               <FaInstagram className="text-white" />
             </a>
 
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-green-500 transition">
+            <a href="https://wa.me/917042252897" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-3 rounded-full hover:bg-green-500 transition">
               <FaWhatsapp className="text-white" />
             </a>
 
@@ -125,17 +125,35 @@ const Navbar = () => {
           ))}
         </div>
 
+        {/* ✅ ONLY FIXED PART */}
         <div className="flex gap-6 justify-center">
-          <a href="https://facebook.com/yourusername" target="_blank"><FaFacebookF className="text-white" /></a>
-          <a href="https://instagram.com/yourusername" target="_blank"><FaInstagram className="text-white" /></a>
-          <a href="https://wa.me/919876543210" target="_blank"><FaWhatsapp className="text-white" /></a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank"><FaLinkedinIn className="text-white" /></a>
-          <a href="https://www.youtube.com/watch?v=6xP5oUY7V3w" target="_blank"><FaYoutube className="text-white" /></a>
-          <a href="https://twitter.com/yourusername" target="_blank"><FaTwitter className="text-white" /></a>
+          <a href="https://facebook.com/generation_next_security" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF className="text-white" />
+          </a>
+
+          <a href="https://instagram.com/generation_next_security" target="_blank" rel="noopener noreferrer">
+            <FaInstagram className="text-white" />
+          </a>
+
+          <a href="https://wa.me/917042252897" target="_blank">
+            <FaWhatsapp className="text-white" />
+          </a>
+
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <FaLinkedinIn className="text-white" />
+          </a>
+
+          <a href="https://www.youtube.com/watch?v=6xP5oUY7V3w" target="_blank">
+            <FaYoutube className="text-white" />
+          </a>
+
+          <a href="https://twitter.com/yourusername" target="_blank">
+            <FaTwitter className="text-white" />
+          </a>
         </div>
       </div>
 
-      {/* 🔥 ONLY CHANGE HERE (SCROLL ADDED) */}
+      {/* 🔥 POPUP SAME (UNCHANGED) */}
       {showPresence && (
         <div className="fixed inset-0 z-[999999] bg-black/80 flex items-center justify-center p-6">
 
@@ -148,7 +166,6 @@ const Navbar = () => {
 
           <div className="w-full max-w-7xl bg-white rounded-2xl p-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-black max-h-[80vh] overflow-y-auto">
 
-            {/* SAME DATA */}
             <div>
               <h3 className="text-red-500 font-bold">Delhi</h3>
               <p>South Delhi</p><p>Central Delhi</p><p>East Delhi</p><p>West Delhi</p><p>North Delhi</p>
